@@ -13735,9 +13735,11 @@ So adding more points I don't think it will have any benefit.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>Grid search technique is like making table with all possibility and choose for you the best choise to improve our model. by estimate the different hyperparameters .</p>
-<p>Grid help us the to try all combinations because the number of combinations grows exponentially without do it one by one so saveing a lot of time.</p>
+<p>Grid search technique is like making table with all possibility and choose for you the best choice to improve our model. by estimate the different hyperparameters .</p>
+<p>Grid help us the to try all combinations because the number of combinations grows exponentially without do it one by one so saving a lot of time.</p>
 <p>Also we can chose different metrics to measure our result.</p>
+<p>input of Grid Search is grid of parameters related to learning algorithm.</p>
+<p>output of GridSearch is highest cross-validation accuracy that matches with the corresponding parameters.</p>
 
 </div>
 </div>
@@ -13761,11 +13763,13 @@ So adding more points I don't think it will have any benefit.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong>
-fold cross-validation used to evaluate machine learning models and by splliting taining data to taining data and     validation data
-k-flod simpaly splliting  training data set into k equal subsets. Each subset is called a fold
-for each fold we make it as Validation set and others stay training set.</p>
-<p>after valdations happend. Last step will be testing so valdations will happend actully in traning data this  approche will help to protect our testing data.</p>
+<p><strong>Answer:</strong></p>
+<p>In cross-validation first we split our data to train and test and then apply k-fold on train data.
+then we train our model on (k-1) folds and use 1 fold for cross-validation.
+we repeat  this step k times each time with different fold.
+then we take average of cross-validation score. Once we have selected the best parameters using gridSearch along with k-fold cross-validation, we will use the test set to check the final performance of the model.</p>
+<p>benefits: More reliable than train&amp;test split, we can more reliably estimate model performance of different parameters  during grid search. there is a danger to overfit to the validation set since we use it many times.
+in cross-validation, overfitting problem is less since our effective validation set size is larger.</p>
 
 </div>
 </div>
